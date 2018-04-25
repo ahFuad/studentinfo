@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html"
+      xml:lang="en" lang="en">
+<head>
+    <title>Student Entry</title>
+</head>
+<body>
+<f:view>
+    <h4>Enter student info</h4>
+</f:view>
+<h:form>
+    <h4>Student -1</h4>
+    <h:outputLabel for="labelStudent1Id">
+        <h:outputText value="Id:   "></h:outputText>
+        <h:inputText id="student1Id" value="#{studentController.student1.studentId}"></h:inputText>
+    </h:outputLabel>
+    <h:outputLabel for="labelStudent1Name">
+        <h:outputText value="Name: "></h:outputText>
+        <h:inputText id="student1Name" value="#{studentController.student1.studentName}"></h:inputText>
+    </h:outputLabel>
+    <br/>
+    <h4>Student - 2</h4>
+    <h:outputLabel for="labelStudent2Id">
+        <h:outputText value="Id:   "></h:outputText>
+        <h:inputText id="student2Id" value="#{studentController.student2.studentId}"></h:inputText>
+    </h:outputLabel>
+    <h:outputLabel for="labelStudent2Name">
+        <h:outputText value="Name: "></h:outputText>
+        <h:inputText id="student2Name" value="#{studentController.student2.studentName}"></h:inputText>
+    </h:outputLabel>
+    <br/>
+    <br/>
+    <hr/>
+    <br/>
+    <h:commandButton value="Add" action="#{studentController.isNextPage}"></h:commandButton>
+</h:form>
+
+</body>
+</html>
